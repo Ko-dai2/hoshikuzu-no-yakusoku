@@ -207,92 +207,94 @@ app.post('/webhook', line.middleware(config), async (req, res) => {
 async function handleEvent(event) {
   console.log(`Event type: ${event.type}`);
   
-  // テキストメッセージ以外は無視
-  if (event.type !== 'message' || event.message.type !== 'text') {
-    console.log('Event ignored (not a text message)');
-    return Promise.resolve(null);
-  }
-  
-  const userId = event.source.userId;
-  const userMessage = event.message.text;
-  const replyToken = event.replyToken;
-  
-  console.log(`User: ${userId}`);
-  console.log(`Message: "${userMessage}"`);
-  
-  try {
-    // 「物語を始めますか？」で開始
-    if (userMessage === '物語を始めますか？') {
-      console.log('Starting new story');
-      const user = initializeUser(userId);
-      const firstScene = getSceneData(user.currentSceneId);
-      
-      if (!firstScene) {
-        throw new Error('First scene not found');
+      // 個別イベントの処理
+    async function handleEvent(event) {
+      console.log(`Event type: ${event.type}`);
+
+      // テキストメッセージ以外は無視
+      if (event.type !== 'message' || event.message.type !== 'text') {
+        console.log('Event ignored (not a text message)');
+        return Promise.resolve(null);
       }
+  
+      const userId = event.source.userId;
+      const userMessage = event.message.text;
+      const replyToken = event.replyToken;
+  
+      console.log(`User: ${userId}`);
+      console.log(`Message: "${userMessage}"`);
+
+      try {
+        // 「物語を始めますか？\n> はい」で開始
+        if (userMessage === '物語を始めますか？\n> はい' || userMessage === '物語を始めますか？') {
+          console.log('Starting new story');
+          const user = initializeUser(userId);
+         const firstScene = getSceneData(user.currentSceneId);
+
+          if (!firstScene) {
+            throw new Error('First scene not found');
+         }
+
+         const message = createLineMessage(firstScene);
+          return client.replyMessage(replyToken, message);
+        }
+
+        // 「最初から」でリセット
+        if (userMessage === '最初から') {
+          console.log('Resetting story');
+          const user = initializeUser(userId);
+          const firstScene = getSceneData(user.currentSceneId);
       
-      const message = createLineMessage(firstScene);
-      return client.replyMessage(replyToken, message);
-    }
-    
-    // 「最初から」でリセット
-    if (userMessage === '最初から') {
-      console.log('Resetting story');
-      const user = initializeUser(userId);
-      const firstScene = getSceneData(user.currentSceneId);
+          if (!firstScene) {
+            throw new Error('First scene not found');
+          }
       
-      if (!firstScene) {
-        throw new Error('First scene not found');
+          const message = createLineMessage(firstScene);
+          return client.replyMessage(replyToken, message);
+        }
+
+       // ユーザーが未登録の場合
+       const user = getUser(userId);
+       if (!user) {
+         console.log('User not found, no action taken (waiting for start message)');
+         return Promise.resolve(null); // 何も返さない
+        }
+
+        // ユーザーの入力を処理
+        const nextScene = processUserInput(user, userMessage);
+
+        if (nextScene === 'INVALID_INPUT') {
+          console.log('Sending invalid input message');
+          return client.replyMessage(replyToken, {
+            type: 'text',
+            text: '表示されている選択肢から選んでください。'
+          });
+        }
+
+        if (!nextScene) {
+          console.log('Story ended, sending completion message');
+         return client.replyMessage(replyToken, {
+            type: 'text',
+           text: '物語はここで終わりです。お疲れ様でした！\n\n最初から始める場合は「最初から」と入力してください。'
+          });
+        }
+
+        // 次のシーンを送信
+        const message = createLineMessage(nextScene);
+        return client.replyMessage(replyToken, message);
+
+      } catch (error) {
+        console.error('Error handling event:', error);
+
+        // エラー時はユーザーにメッセージを送信
+        return client.replyMessage(replyToken, {
+          type: 'text',
+          text: 'エラーが発生しました。「最初から」と入力してやり直してください。'
+        }).catch(err => {
+          console.error('Failed to send error message:', err);
+        });
       }
-      
-      const message = createLineMessage(firstScene);
-      return client.replyMessage(replyToken, message);
     }
-    
-    // ユーザーが未登録の場合
-    const user = getUser(userId);
-    if (!user) {
-      console.log('User not found, sending welcome message');
-      return client.replyMessage(replyToken, {
-        type: 'text',
-        text: '物語を始めますか？'
-      });
-    }
-    
-    // ユーザーの入力を処理
-    const nextScene = processUserInput(user, userMessage);
-    
-    if (nextScene === 'INVALID_INPUT') {
-      console.log('Sending invalid input message');
-      return client.replyMessage(replyToken, {
-        type: 'text',
-        text: '表示されている選択肢から選んでください。'
-      });
-    }
-    
-    if (!nextScene) {
-      console.log('Story ended, sending completion message');
-      return client.replyMessage(replyToken, {
-        type: 'text',
-        text: '物語はここで終わりです。お疲れ様でした！\n\n最初から始める場合は「物語を始めますか？」と入力してください。'
-      });
-    }
-    
-    // 次のシーンを送信
-    const message = createLineMessage(nextScene);
-    return client.replyMessage(replyToken, message);
-    
-  } catch (error) {
-    console.error('Error handling event:', error);
-    
-    // エラー時はユーザーにメッセージを送信
-    return client.replyMessage(replyToken, {
-      type: 'text',
-      text: 'エラーが発生しました。「最初から」と入力してやり直してください。'
-    }).catch(err => {
-      console.error('Failed to send error message:', err);
-    });
-  }
 }
 
 // ヘルスチェック用エンドポイント
