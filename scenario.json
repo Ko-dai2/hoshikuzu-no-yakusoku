@@ -1,0 +1,61 @@
+{
+  "prologue": {
+    "id": "prologue_start",
+    "text": "ここは、学園都市ルミナ。この街に住む17歳の「ひな」は夜中、静かな警報音で目覚めた。\n\nこの街では高度にIT化が進んでおり、他の街ではいまだに「スマホ」と呼ばれるデバイスが使われていると聞くが、この街では皆、スマートバンドと呼ばれる腕輪型のデバイスを装着している。\n\n先ほどの警告音は、そこから鳴ったものらしい。",
+    "next": "prologue_system1"
+  },
+  "prologue_system1": {
+    "id": "prologue_system1",
+    "text": "[SYSTEM]\ntime-user/NEKONOKIMOCHI からのアクセスを検出。\n\n信号品質: 27.4 dB\n要求: TIME-ANCHOR / ONE-TIME-PAYLOAD\nトークン: 0xA7F2::c13b-9f02\n\n認証を実行しますか?",
+    "choices": [
+      {
+        "label": "y (認証する)",
+        "value": "auth_yes",
+        "next": "prologue_auth_yes"
+      },
+      {
+        "label": "n (拒否する)",
+        "value": "auth_no",
+        "next": "prologue_auth_no"
+      }
+    ]
+  },
+  "prologue_auth_yes": {
+    "id": "prologue_auth_yes",
+    "text": "入力: y\n\n認証開始...認証中...\n公開鍵照合...OK\n暗号チャネル確立...完了\n\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: 駅前 小さな公園(精度: ±5m)\nセッションID: sess-0xA7F2-01\n\n認証完了。探索を開始してください。\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。",
+    "params": {
+      "memory": 1,
+      "resolve": 1
+    },
+    "next": "chapter1_start"
+  },
+  "prologue_auth_no": {
+    "id": "prologue_auth_no",
+    "text": "入力: n\n\n認証拒否。\n......アクセスを遮断中。\n......遮断失敗。\n\n[SYSTEM WARNING]\n予期しないプロセスが実行されています。\nsource: time-user/NEKONOKIMOCHI\n優先度: SYSTEM / ROOT\n\n排他制御要求――拒否。\n手動制御を奪取しますか?",
+    "params": {
+      "resolve": -1
+    },
+    "choices": [
+      {
+        "label": "y (奪取する)",
+        "value": "takeover_yes",
+        "next": "prologue_force"
+      },
+      {
+        "label": "n (何もしない)",
+        "value": "takeover_no",
+        "next": "prologue_force"
+      }
+    ]
+  },
+  "prologue_force": {
+    "id": "prologue_force",
+    "text": "......応答なし。\n再試行......再試行......失敗。\n\nアクセス権限がtime-user:NEKONOKIMOCHIにより上書きされました。\n\n[ERROR]\nプロトコル TIME-LINK が強制起動されました。\n\n通信チャネルを確立しています......OK\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: 駅前 小さな公園(精度: ±5m)\nセッションID: sess-0xA7F2-01\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。",
+    "next": "chapter1_start"
+  },
+  "chapter1_start": {
+    "id": "chapter1_start",
+    "text": "【第1章が始まります】\n\n※ここに第1章のテキストを追加してください",
+    "next": null
+  }
+}
