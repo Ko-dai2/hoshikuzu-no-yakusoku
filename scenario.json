@@ -50,13 +50,8 @@
   },
   "prologue_force": {
     "id": "prologue_force",
-    "text": "……応答なし。\n\n再試行……再試行……失敗。\n\nアクセス権限がtime-user:NEKONOKIMOCHIにより上書きされました。\n\n[ERROR]\nプロトコル TIME-LINK が強制起動されました。\n\n通信チャネルを確立しています……OK\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。",
+    "text": "……応答なし。\n\n再試行……再試行……失敗。\n\nアクセス権限がtime-user:NEKONOKIMOCHIにより上書きされました。\n\n[ERROR]\nプロトコル TIME-LINK が強制起動されました。\n\n通信チャネルを確立しています……OK\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。\n\n【プロローグ・終わり】",
     "next": "prologue_end"
-  },
-  "prologue_end": {
-    "id": "prologue_end",
-    "text": "【プロローグ・終わり】",
-    "next": "chapter1_start"
   },
   "chapter1_start": {
     "id": "chapter1_start",
