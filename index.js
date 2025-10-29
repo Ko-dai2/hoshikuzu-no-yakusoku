@@ -98,7 +98,7 @@ function createLineMessage(scene) {
         action: {
           type: 'message',
           label: choice.label,
-          text: choice.value
+          text: choice.label  // ← valueではなくlabelを送信
         }
       }))
     };
@@ -150,9 +150,13 @@ function processUserInput(user, inputText) {
     }
   }
   
-  // 選択肢の処理
+  // 選択肢の処理（labelまたはvalueで検索）
   if (currentScene.choices && Array.isArray(currentScene.choices)) {
-    const selectedChoice = currentScene.choices.find(choice => choice.value === inputText);
+    // まずlabelで検索、なければvalueで検索
+    let selectedChoice = currentScene.choices.find(choice => choice.label === inputText);
+    if (!selectedChoice) {
+      selectedChoice = currentScene.choices.find(choice => choice.value === inputText);
+    }
     
     if (selectedChoice) {
       console.log(`Valid choice selected: ${selectedChoice.label}`);
