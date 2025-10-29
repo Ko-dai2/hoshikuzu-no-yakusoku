@@ -29,8 +29,8 @@
   },
   "prologue_auth_yes": {
     "id": "prologue_auth_yes",
-    "text": "入力: y\n\n認証開始…認証中…\n公開鍵照合…OK\n暗号チャネル確立…完了\n\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n認証完了。探索を開始してください。\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。",
-    "next": "prologue_end"
+    "text": "入力: y\n\n認証開始…認証中…\n公開鍵照合…OK\n暗号チャネル確立…完了\n\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n認証完了。探索を開始してください。\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。\n\n【プロローグ・終わり】",
+    "next": "chapter1_star"
   },
   "prologue_auth_no": {
     "id": "prologue_auth_no",
@@ -51,7 +51,7 @@
   "prologue_force": {
     "id": "prologue_force",
     "text": "……応答なし。\n\n再試行……再試行……失敗。\n\nアクセス権限がtime-user:NEKONOKIMOCHIにより上書きされました。\n\n[ERROR]\nプロトコル TIME-LINK が強制起動されました。\n\n通信チャネルを確立しています……OK\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。\n\n【プロローグ・終わり】",
-    "next": "prologue_end"
+    "next": "chapter1_start"
   },
   "chapter1_start": {
     "id": "chapter1_start",
@@ -153,7 +153,7 @@
   },
   "chapter1_new_notification": {
     "id": "chapter1_new_notification",
-    "text": "その数秒後、新しい通知が鳴った。\n\n[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"ENERGY_DRINK_LOVER\"\n信号品質: 31.8 dB\n要求: TIME-ANCHOR / FRAGMENT_03\nトークン: 0xA7F2::9e3f-4a1c\nFragment_02 解放準備中...\n\n断片受信 2 / 07\n\nメッセージ復元:\n「なんでもできるけど、なんでも下手なんだよね」\n\nヒント: HIGH_SCORE = 000000\n推定座標: ゲームセンター「NOVA」跡地\nセッションID: sess-0xA7F2-02\n\n探索を継続してください。",
+    "text": "その数秒後、新しい通知が鳴った。\n\n[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"ENERGY_DRINK_LOVER\"\n信号品質: 31.8 dB\n要求: TIME-ANCHOR / FRAGMENT_02\nトークン: 0xA7F2::9e3f-4a1c\nFragment_02 解放準備中...\n\n断片受信 2 / 07\n\nメッセージ復元:\n「なんでもできるけど、なんでも下手なんだよね」\n\nヒント: HIGH_SCORE = 000000\n推定座標: ゲームセンター「NOVA」跡地\nセッションID: sess-0xA7F2-02\n\n探索を継続してください。",
     "choices": [
       {
         "label": "すぐに向かう",
