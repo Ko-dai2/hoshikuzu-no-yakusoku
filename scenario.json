@@ -1,12 +1,12 @@
 {
   "prologue_start": {
     "id": "prologue_start",
-    "text": "【プロローグ】\n\nここは、学園都市ルミナ。この街に住む17歳の「ひな」は夜中、静かな警報音で目覚めた。\n\nこの街では高度にIT化が進んでおり、他の街ではいまだに「スマホ」と呼ばれるデバイスが使われていると聞くが、この街では皆、スマートバンドと呼ばれる腕輪型のデバイスを装着している。\n\n先ほどの警告音は、そこから鳴ったものらしい。",
+    "text": "ここは、学園都市ルミナ。この街に住む17歳の「ひな」は夜中、静かな警報音で目覚めた。\n\nこの街では高度にIT化が進んでおり、他の街ではいまだに「スマホ」と呼ばれるデバイスが使われていると聞くが、この街では皆、スマートバンドと呼ばれる腕輪型のデバイスを装着している。\n\n先ほどの警告音は、そこから鳴ったものらしい。\n\n……ブォン───\n\nスマートバンドのホログラムディスプレイが起動する。",
     "next": "prologue_system1"
   },
   "prologue_system1": {
     "id": "prologue_system1",
-    "text": "[SYSTEM]\ntime-user/NEKONOKIMOCHI からのアクセスを検出。\n\n信号品質: 27.4 dB\n要求: TIME-ANCHOR / ONE-TIME-PAYLOAD\nトークン: 0xA7F2::c13b-9f02\n\n認証を実行しますか?",
+    "text": "[SYSTEM]\ntime-user/NEKONOKIMOCHI からのアクセスを検出。\n\n信号品質: 27.4 dB\n要求: TIME-ANCHOR / ONE-TIME-PAYLOAD\nトークン: 0xA7F2::c13b-9f02\n\n認証を実行しますか？",
     "choices": [
       {
         "label": "y (認証する)",
@@ -29,12 +29,12 @@
   },
   "prologue_auth_yes": {
     "id": "prologue_auth_yes",
-    "text": "入力: y\n\n認証開始...認証中...\n公開鍵照合...OK\n暗号チャネル確立...完了\n\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: 駅前 小さな公園(精度: ±5m)\nセッションID: sess-0xA7F2-01\n\n認証完了。探索を開始してください。\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。",
-    "next": "chapter1_start"
+    "text": "入力: y\n\n認証開始…認証中…\n公開鍵照合…OK\n暗号チャネル確立…完了\n\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n認証完了。探索を開始してください。\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。",
+    "next": "prologue_end"
   },
   "prologue_auth_no": {
     "id": "prologue_auth_no",
-    "text": "入力: n\n\n認証拒否。\n......アクセスを遮断中。\n......遮断失敗。\n\n[SYSTEM WARNING]\n予期しないプロセスが実行されています。\nsource: time-user/NEKONOKIMOCHI\n優先度: SYSTEM / ROOT\n\n排他制御要求――拒否。\n手動制御を奪取しますか?",
+    "text": "入力: n\n\n認証拒否。\n\n……アクセスを遮断中。\n……遮断失敗。\n\n[SYSTEM WARNING]\n予期しないプロセスが実行されています。\nsource: time-user/NEKONOKIMOCHI\n優先度: SYSTEM / ROOT\n\n排他制御要求――拒否。\n手動制御を奪取しますか？",
     "choices": [
       {
         "label": "y (奪取する)",
@@ -50,12 +50,147 @@
   },
   "prologue_force": {
     "id": "prologue_force",
-    "text": "......応答なし。\n再試行......再試行......失敗。\n\nアクセス権限がtime-user:NEKONOKIMOCHIにより上書きされました。\n\n[ERROR]\nプロトコル TIME-LINK が強制起動されました。\n\n通信チャネルを確立しています......OK\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: 駅前 小さな公園(精度: ±5m)\nセッションID: sess-0xA7F2-01\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。",
+    "text": "……応答なし。\n\n再試行……再試行……失敗。\n\nアクセス権限がtime-user:NEKONOKIMOCHIにより上書きされました。\n\n[ERROR]\nプロトコル TIME-LINK が強制起動されました。\n\n通信チャネルを確立しています……OK\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。",
+    "next": "prologue_end"
+  },
+  "prologue_end": {
+    "id": "prologue_end",
+    "text": "【プロローグ・終わり】",
     "next": "chapter1_start"
   },
   "chapter1_start": {
     "id": "chapter1_start",
-    "text": "【プロローグ完了】\n\n第1章のシナリオは現在作成中です。\n\n「最初から」と入力すると、プロローグの最初に戻ります。",
+    "text": "【第1章】\n\n深夜。ひなは座標に従って少し外れにある小さな公園、「なないろ公園」に到着した。\n\nなにもこの怪しさ満載の、しかも謎のユーザーからの通知に従いここに来る必要はなかったのだが、なぜか行った方が良い気がした。\n\n「それにしても、星屑って何……？」\n\nそう思案しようとした時、スマートバンドが微かに振動した。",
+    "next": "chapter1_system_message"
+  },
+  "chapter1_system_message": {
+    "id": "chapter1_system_message",
+    "text": "[SYSTEM] 推定座標範囲内への到着を検出。\nGPS精度: ±2.3m\nスキャンを開始します...\n詳細座標特定プロセス起動中...\n三角測量実行...OK\n環境マッピング...OK\n目標物検索...実行中\n\n[WARNING] プロセスが異常終了しました。\nERROR_CODE: 0xE7F4A2\nスタックトレース:\nat FragmentLocator.scan()\nat TimeLink.resolvePosition()\nat NEKONOKIMOCHI.payload_01\n原因: SIGNAL_INTERFERENCE detected\n再試行しています...\n......失敗\n......失敗\n......タイムアウト\n解析中 ▌ 0%\n解析中 ▌ 0%\n解析中 ▌ 0%\n\n「急にエラー……」\n\nまたディスプレイが起動して動き出したと思ったらエラーになってしまったらしい。\n\nどうしたものかと思い周りを見渡すと、街灯の光に照らされた自動販売機が目に入る。",
+    "choices": [
+      {
+        "label": "エラーの解析を待つ",
+        "value": "wait_error",
+        "next": "chapter1_wait_path"
+      },
+      {
+        "label": "自販機の近くに行く",
+        "value": "go_vending",
+        "next": "chapter1_vending_path"
+      }
+    ]
+  },
+  "chapter1_wait_path": {
+    "id": "chapter1_wait_path",
+    "text": "1分ほど待ってみたのだが、一向に進まない…\n\nボーっとしていると、喉が乾いていることに気づいた。起きて何も飲まずに公園まで歩いて来たためだろう。\n\n仕方ない…自販機で何か買おうか。",
+    "params": {
+      "resolve": 1
+    },
+    "next": "chapter1_vending_machine"
+  },
+  "chapter1_vending_path": {
+    "id": "chapter1_vending_path",
+    "text": "エラーで何もできないから帰ろうかとも考えたが、こんな深夜にせっかくここまで来たのだ。解析が終わるのを待つべきか。\n\nそうなると暇で仕方がない。特に喉が渇いているわけでもないが、目についた自販機の方へ行ってみる。",
+    "next": "chapter1_vending_machine"
+  },
+  "chapter1_vending_machine": {
+    "id": "chapter1_vending_machine",
+    "text": "自販機の前に立つと、ふとエナジードリンクのボトルが目に入る。\n\nあの、「野生を解き放て」のやつだ。もしかしたら「翼を授ける」の方が有名かもしれないが。\n\n特に好きなわけでもなく、というか飲んだことがないような気もするが、なぜか懐かしい気持ちになる。",
+    "choices": [
+      {
+        "label": "エナドリを買う",
+        "value": "buy_energy_drink",
+        "next": "chapter1_buy_drink",
+        "params": {
+          "memory": 2
+        }
+      },
+      {
+        "label": "別の飲み物を買う",
+        "value": "buy_other",
+        "next": "chapter1_other_drink"
+      }
+    ]
+  },
+  "chapter1_buy_drink": {
+    "id": "chapter1_buy_drink",
+    "text": "なぜか気になって、そのエナジードリンクを買ってしまった。\n\n缶を開けると、シュワッという音。\n\n一口飲むと…この炭酸の強さ、なんだか懐かしい。\n\n[SYSTEM] 座標解析が完了しました。\n目標物: 特定完了\n距離: 1.7m\n方位: 北西 23°\n信号強度が上昇しています...\n27.4 dB → 31.8 dB → 35.2 dB\n対象物からの共鳴反応を検出。\nTIME-ANCHOR解放準備中...\n\n急に通知音が聞こえた。エラーの解析は済んでいたのか……\n\nそんなことを考えていると、視界が揺らいだ。",
+    "next": "chapter1_memory_flash"
+  },
+  "chapter1_other_drink": {
+    "id": "chapter1_other_drink",
+    "text": "エナドリは気になったが、別の飲み物を選んだ。\n\n一口飲むと、喉の渇きが癒される。\n\n[SYSTEM] 座標解析が完了しました。\n目標物: 特定完了\n距離: 1.7m\n方位: 北西 23°\n信号強度が上昇しています...\n27.4 dB → 31.8 dB → 35.2 dB\n対象物からの共鳴反応を検出。\nTIME-ANCHOR解放準備中...\n\n急に通知音が聞こえた。エラーの解析は済んでいたのか……\n\nそんなことを考えていると、視界が少しぼやけた気がした。",
+    "next": "chapter1_found_crystal"
+  },
+  "chapter1_memory_flash": {
+    "id": "chapter1_memory_flash",
+    "text": "[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— ねえ、これ飲んだことある？』\n\n『—— エナドリ？あんたの家、いっつもあるよねそれ……エナドリ中毒になってるんじゃない？』\n\n『—— 中毒じゃないって！味が好きなだけ！あと、炭酸の強さが絶妙なんだよねー他の炭酸のと違って。わかるでしょ？』\n\n『—— ぜんっぜんわかんない。』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_01: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\nん……なんだっけこれ………これ誰……幸せな……………",
+    "params": {
+      "bond": 1
+    },
+    "next": "chapter1_found_crystal"
+  },
+  "chapter1_found_crystal": {
+    "id": "chapter1_found_crystal",
+    "text": "───\n\n気づいたら朝で、知らない天井……ではなくいつもの自室のベットの上だった。\n\n何か昨日あったような………それとも夢……？\n\n一瞬そう思ったが、ホログラムを見て認識を改める。\n\n[SYSTEM] セッション記録\n日時: XXXX年XX月XX日 03:47\n取得済みフラグメント: 01 / 07\nステータス: ACTIVE\nTIME-ANCHOR_01: 確保済み\n保存場所: local_storage/fragments/01.dat\n整合性: OK\n\nそう、実は手に、キラキラと七色に煌めく小さな水晶を握っていた。\n\nこれが星屑とシステムが呼称しているものだろう。これを七個集めたら何か…",
+    "choices": [
+      {
+        "label": "水晶をじっくり観察する",
+        "value": "observe_crystal",
+        "next": "chapter1_observe_crystal",
+        "params": {
+          "memory": 1
+        }
+      },
+      {
+        "label": "すぐにポケットにしまう",
+        "value": "pocket_crystal",
+        "next": "chapter1_new_notification",
+        "params": {
+          "resolve": 1
+        }
+      }
+    ]
+  },
+  "chapter1_observe_crystal": {
+    "id": "chapter1_observe_crystal",
+    "text": "水晶を光にかざしてみる。\n\n七色に輝く光が、部屋中に反射する。\n\n綺麗…なんだか、この光を見たことがある気がする。\n\nでも、いつ…？",
+    "next": "chapter1_new_notification"
+  },
+  "chapter1_new_notification": {
+    "id": "chapter1_new_notification",
+    "text": "その数秒後、新しい通知が鳴った。\n\n[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"ENERGY_DRINK_LOVER\"\n信号品質: 31.8 dB\n要求: TIME-ANCHOR / FRAGMENT_03\nトークン: 0xA7F2::9e3f-4a1c\nFragment_02 解放準備中...\n\n断片受信 2 / 07\n\nメッセージ復元:\n「なんでもできるけど、なんでも下手なんだよね」\n\nヒント: HIGH_SCORE = 000000\n推定座標: ゲームセンター「NOVA」跡地\nセッションID: sess-0xA7F2-02\n\n探索を継続してください。",
+    "choices": [
+      {
+        "label": "すぐに向かう",
+        "value": "go_immediately",
+        "next": "chapter1_end_eager",
+        "params": {
+          "resolve": 2
+        }
+      },
+      {
+        "label": "少し考えてから向かう",
+        "value": "think_first",
+        "next": "chapter1_end_cautious",
+        "params": {
+          "memory": 1
+        }
+      }
+    ]
+  },
+  "chapter1_end_eager": {
+    "id": "chapter1_end_eager",
+    "text": "ゲームセンター…行ってみよう。\n\nなぜかは分からないが、行かなければならない気がする。\n\n次の星屑が、そこで待っている。\n\n【第1章・終わり】",
+    "next": "chapter2_start"
+  },
+  "chapter1_end_cautious": {
+    "id": "chapter1_end_cautious",
+    "text": "ゲームセンター…「なんでもできるけど、なんでも下手」って…？\n\nなんだか引っかかる言葉だ。誰かの声のような…\n\nとにかく、行ってみるしかない。\n\n【第1章・終わり】",
+    "next": "chapter2_start"
+  },
+  "chapter2_start": {
+    "id": "chapter2_start",
+    "text": "【第2章】\n\n※第2章は現在作成中です。\n\n「最初から」と入力すると、プロローグの最初に戻ります。",
     "next": null
   }
 }
