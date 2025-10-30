@@ -44,6 +44,7 @@ function initializeUser(userId) {
     memory: 0,
     bond: 0,
     resolve: 0,
+    curiosity: 0,  // ← この行を追加
     history: []
   };
   console.log(`User initialized: ${userId}`);
@@ -80,6 +81,10 @@ function updateParameters(user, params) {
   if (params.resolve) {
     user.resolve += params.resolve;
     console.log(`Resolve updated: ${user.resolve}`);
+  }
+  if (params.curiosity) {  // ← この4行を追加
+    user.curiosity += params.curiosity;
+    console.log(`Curiosity updated: ${user.curiosity}`);
   }
 }
 
