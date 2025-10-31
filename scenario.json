@@ -291,66 +291,13 @@
   
   "chapter2_crane_game": {
     "id": "chapter2_crane_game",
-    "text": "─── 10 minutes later\n\nま、負けた……\n\n1000円も使ってしまったのに収穫ゼロ…\n\nやった感じ結構楽しくて好きなんだけどなー\n\nその後音ゲー格ゲーにも軽く挑戦したのだが、自分は向いていなかったらしい。",
-    "params": {
-      "curiosity": 1
-    },
-    "choices": [
-      {
-        "label": "もう少し粘ってみる",
-        "value": "keep_trying",
-        "next": "chapter2_keep_trying",
-        "params": {
-          "resolve": 1,
-          "curiosity": 1
-        }
-      },
-      {
-        "label": "諦めて帰ろうとする",
-        "value": "give_up",
-        "next": "chapter2_give_up"
-      }
-    ]
-  },
-  
-  "chapter2_keep_trying": {
-    "id": "chapter2_keep_trying",
-    "text": "もしかして───『「なんでもできるけど、なんでも下手」って私のこと…？』\n\nいいや、ふと思ったがそんなことはないだろう。だって私、ゲームやったの今日が初めてだから難しかっただけだし。\n\nもう少しだけやってみよう。\n\nでも、結局30分経っても通知が来なかった。",
-    "next": "chapter2_find_crystal"
-  },
-  
-  "chapter2_give_up": {
-    "id": "chapter2_give_up",
-    "text": "もしかして───『「なんでもできるけど、なんでも下手」って私のこと…？』\n\nいいや、ふと思ったがそんなことはないだろう。だって私、ゲームやったの今日が初めてだから難しかっただけだし。\n\n結局1時間経っても通知が来なかったのでもう帰ることにする。",
-    "next": "chapter2_find_crystal"
-  },
-  
-  "chapter2_find_crystal": {
-    "id": "chapter2_find_crystal",
-    "text": "「なんなんだよ…」\n\n悪態をつきながら出口に向かっていると、目の端にきらりと光るものを捉えた。\n\n「あ……」星屑だ！\n\nそれはクレーンゲームの中に配置されていた。\n\n「取れってこと？」",
-    "choices": [
-      {
-        "label": "挑戦してみる",
-        "value": "try_crane",
-        "next": "chapter2_memory_flash",
-        "params": {
-          "resolve": 2
-        }
-      },
-      {
-        "label": "じっと見つめる",
-        "value": "stare",
-        "next": "chapter2_memory_flash",
-        "params": {
-          "memory": 1
-        }
-      }
-    ]
+    "text": "─── 10 minutes later\n\nま、負けた……\n\n1000円も使ってしまったのに収穫ゼロ…\n\nやった感じ結構楽しくて好きなんだけどなー\n\nその後音ゲー格ゲーにも軽く挑戦したのだが、自分は向いていなかったらしい。\n\nもしかして───『「なんでもできるけど、なんでも下手」って私のこと…？』\n\nいいや、ふと思ったがそんなことはないだろう。だって私、ゲームやったの今日が初めてだから難しかっただけだし。\n\n結局1時間経っても通知が来なかったのでもう帰ることにする。\n\n「なんなんだよ…」\n\n悪態をつきながら出口に向かっていると、目の端にきらりと光るものを捉えた。\n\n「あ……」星屑だ！\n\nそれはクレーンゲームの中に配置されていた。\n\n「取れってこと？」\n\nそう呟くと、視界が揺らいだ。",
+    "next": "chapter2_memory_flash"
   },
   
   "chapter2_memory_flash": {
     "id": "chapter2_memory_flash",
-    "text": "そう呟くと、視界が揺らいだ。\n\n[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— 大丈夫大丈夫！下手でも楽しければいいんだよ！』\n\n『—— ほら、一緒にやろう？私が教えてあげる！』\n\n『—— できた！？すごいじゃん！』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_02: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\n温かい声。励ましてくれる誰か。\n\nあれは誰？",
+    "text": "[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— 大丈夫大丈夫！下手でも楽しければいいんだよ！』\n\n『—— ほら、一緒にやろう？私が教えてあげる！』\n\n『—— できた！？すごいじゃん！』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_02: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\n温かい声。励ましてくれる誰か。\n\nあれは誰？",
     "params": {
       "bond": 2,
       "memory": 1
@@ -360,13 +307,90 @@
   
   "chapter2_notification": {
     "id": "chapter2_notification",
-    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"BEGINNER_GAMER\"\n信号品質: 29.6 dB\n要求: TIME-ANCHOR / FRAGMENT_03\nトークン: 0xA7F2::7d8e-2f4b\nFragment_03 解放準備中...\n\n断片受信 3 / 07\n\nメッセージ復元:\n「ちょっとだけ猫アレルギーあるんだよね」\n\nヒント: FELINE_PARADOX = TRUE\n推定座標: 猫カフェ「ねこのきもち」\nセッションID: sess-0xA7F2-03\n\n探索を継続してください。\n\n【第2章・終わり】",
+    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"BEGINNER_GAMER\"\n信号品質: 29.6 dB\n要求: TIME-ANCHOR / FRAGMENT_03\nトークン: 0xA7F2::7d8e-2f4b\nFragment_03 解放準備中...\n\n断片受信 3 / 07\n\nメッセージ復元:\n「ちょっとだけ猫アレルギーあるんだよね」\n\nヒント: FELINE_PARADOX = TRUE\n推定座標: 猫カフェ「キャットパレード」\nセッションID: sess-0xA7F2-03\n\n探索を継続してください。\n\n【第2章・終わり】",
     "next": "chapter3_start"
   },
   
   "chapter3_start": {
     "id": "chapter3_start",
-    "text": "【第3章】\n\n※第3章のシナリオは現在作成中です。\n\n「最初から」と入力すると、プロローグの最初に戻ります。",
+    "text": "【第3章】\n\n今日もまた普通の1日が始まる。うん、普通だ。デバイスの通知に翻弄されながら星屑を集めまわっているという点を除けばだが。\n\n「でも何だかんだ言って、少し楽しくになってきたな〜」\n\nそれにしても星屑を拾った時に聞こえる謎の声、あれ誰なんだろう。いつも自分と誰かの声だ。そういえば、公園の時とゲーセンの時、違う声だった……？そんな気がする。\n\nと、そんなことを考えていたら"普通の日常"と言える学校生活は終わったので非日常に入ろうか。通知が来ていたところによると、今日私が行くべきは猫カフェらしい。\n\n普通に楽しみだ〜かわいい猫ちゃんに出会えるかなー",
+    "next": "chapter3_cat_cafe"
+  },
+  
+  "chapter3_cat_cafe": {
+    "id": "chapter3_cat_cafe",
+    "text": "───と思っていたのも束の間、私もしかしてねこアレルギーかもしれない。\n\n「うー触りたい…だけど近づくと……ハクﾁｭﾝ」\n\nいや確定だ…猫に触れ合う機会がなかったとはいえこの年まで気づかないとは\n\nというか悲しいーせっかく来たのに！\n\nって、通知の中のメッセージ、「ちょっとだけ猫アレルギーあるんだよね」って私のことだったり。\n\nま、ないか。自分でも今まで気づかなかったくらいだし。\n\nで星屑はどこかなー\n\nもう通知待つのめんどくさくなってきたので自分で探す……とあの猫ちゃん持ってるじゃん！キャットタワーの上にいるあの猫ちゃん！なんで！私猫アレルギーだってのに…\n\n「にゃーん。そのキラキラしてるのちょうだいな。」\n\n……うん、ダメだったらしい。",
+    "next": "chapter3_found_crystal"
+  },
+  
+  "chapter3_found_crystal": {
+    "id": "chapter3_found_crystal",
+    "text": "素直に取りに行こう。そう思って立ち上がった瞬間、\n\n[SYSTEM] 推定座標範囲内への到着を検出。\nスキャンを開始します...\n詳細座標特定プロセス起動中...\n三角測量実行...OK\n環境マッピング...OK\n目標物検索...実行中\n\n通知が来たと思ったら、猫ちゃんが星屑を前足で押して落としてきた。\n\n目標物接近……誘導……OK.\n\n落ちてきたーと眺めていたら自分の手のひらに静かに着地した。\n\nホログラムを見るとこいつが誘導したらしいが…「そんなことできたんだ!?」\n\n素直にびっくり\n\nいつものように視界が揺らぎ、謎の音声が聞こえだす。",
+    "next": "chapter3_memory_flash"
+  },
+  
+  "chapter3_memory_flash": {
+    "id": "chapter3_memory_flash",
+    "text": "[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— 猫、好きなんだ？私も！』\n\n『—— え、アレルギーあるの？それでも来てくれたんだ…』\n\n『—— いつか、みんなで猫カフェコラボとかできたらいいよね』\n\n『—— 猫カフェと○○○○○のコラボとか最高じゃない？』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_03: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\nやっぱりこれ、私の記憶だ。なんとなくわかる、というかそうだ。\n\nだけど、わからない。記憶にない…\n\n７つ集まればきっと、わかるはずだ。\n\n今はただ、大事なものであるという予感だけが感じられる。\n\nああ、",
+    "params": {
+      "bond": 2,
+      "memory": 2
+    },
+    "choices": [
+      {
+        "label": "「その夢、叶えたかったなー」",
+        "value": "dream_alone",
+        "next": "chapter3_dream_path",
+        "params": {
+          "memory": 1,
+          "resolve": 1
+        }
+      },
+      {
+        "label": "「みんなと一緒なら、叶えられる気がした。」",
+        "value": "dream_together",
+        "next": "chapter3_together_path",
+        "params": {
+          "bond": 2,
+          "memory": 1
+        }
+      }
+    ]
+  },
+  
+  "chapter3_dream_path": {
+    "id": "chapter3_dream_path",
+    "text": "「その夢、叶えたかったなー」ってあれ？その夢…？\n\nなんだろう？\n\n大きな夢が、あったはずなんだ。\n\nそう思った瞬間、胸が少し温かくなった。\n\n「まだ、間に合うかな」\n\n何かを思い出しかけてる気が……",
+    "next": "chapter3_sneeze"
+  },
+  
+  "chapter3_together_path": {
+    "id": "chapter3_together_path",
+    "text": "「みんなと一緒なら、叶えられる気がした。」そんなことを思った気が……\n\nみんなと一緒なら、叶えられる気がした。ってことは、仲間がいたのかな…\n\n「一人じゃない。そう、なのかも。」",
+    "next": "chapter3_sneeze"
+  },
+  
+  "chapter3_sneeze": {
+    "id": "chapter3_sneeze",
+    "text": "猫を優しく撫でる。ふわふわで温かい。\n\n「ハクｼｭﾝ！」\n\n……くそーまたアレルギー出た。\n\n鼻をすすりながら猫カフェを出る。3つ目の星屑を手に入れた。\n\nその数秒後、新しい通知が鳴った。",
+    "next": "chapter3_notification"
+  },
+  
+  "chapter3_notification": {
+    "id": "chapter3_notification",
+    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"CAT_LOVER\"\n信号品質: 28.3 dB\n要求: TIME-ANCHOR / FRAGMENT_04\nトークン: 0xA7F2::5c2d-8e9a\nFragment_04 解放準備中...\n\n断片受信 4 / 07\n\nメッセージ復元:\n「綺麗な音が大好き」\n\nヒント: PIANO_MELODY = TRUE\n推定座標: 旧市街 音楽スタジオ「Harmony」\nセッションID: sess-0xA7F2-04\n\n探索を継続してください。",
+    "next": "chapter3_end"
+  },
+  
+  "chapter3_end": {
+    "id": "chapter3_end",
+    "text": "夕暮れの帰り道、鼻をすすりながら歩く。\n\nでも、心は温かい。\n\n誰かと話した夢の記憶。\n\n叶えたかった夢があったことがわかった。でも──\n\n「なぜその記憶が私にはないの？」\n\n家に帰って、部屋で3つの星屑を並べる。\n\nそれぞれ、少しずつ色が違う気がする。\n\n「次は…音楽スタジオ」\n\n綺麗な音ってなんだろう？\n\nなぜか、胸が高鳴る。\n\n【第3章・終わり】",
+    "next": "chapter4_start"
+  },
+  
+  "chapter4_start": {
+    "id": "chapter4_start",
+    "text": "【第4章】\n\n※第4章のシナリオは現在作成中です。\n\n「最初から」と入力すると、プロローグの最初に戻ります。",
     "next": null
   }
 }
