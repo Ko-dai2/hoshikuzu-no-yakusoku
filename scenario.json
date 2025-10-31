@@ -76,7 +76,10 @@
       {
         "label": "自販機の近くに行く",
         "value": "go_vending",
-        "next": "chapter1_vending_path"
+        "next": "chapter1_vending_path",
+        "params": {
+          "curiosity": 1
+        }
       }
     ]
   },
@@ -118,7 +121,7 @@
   
   "chapter1_buy_drink": {
     "id": "chapter1_buy_drink",
-    "text": "なぜだか気になって、そのエナジードリンクを買ってしまった。\n\n缶を開けると、シュワッという音。\n\n一口飲むと…なんだか懐かしい。\n\n[SYSTEM] 座標解析が完了しました。\n目標物: 特定完了\n距離: 1.7m\n方位: 北西 23°\n信号強度が上昇しています...\n27.4 dB → 31.8 dB → 35.2 dB\n対象物からの共鳴反応を検出。\nTIME-ANCHOR解放準備中...\n\n急に通知音が聞こえた。エラーの解析は済んでいたのか……\n\nそんなことを考えていると、視界が揺らいだ。",
+    "text": "なぜか気になって、そのエナジードリンクを買ってしまった。\n\n缶を開けると、シュワッという音。\n\n一口飲むと…この炭酸の強さ、なんだか懐かしい。\n\n[SYSTEM] 座標解析が完了しました。\n目標物: 特定完了\n距離: 1.7m\n方位: 北西 23°\n信号強度が上昇しています...\n27.4 dB → 31.8 dB → 35.2 dB\n対象物からの共鳴反応を検出。\nTIME-ANCHOR解放準備中...\n\n急に通知音が聞こえた。エラーの解析は済んでいたのか……\n\nそんなことを考えていると、視界が揺らいだ。",
     "next": "chapter1_memory_flash"
   },
   
@@ -146,7 +149,8 @@
         "value": "observe_crystal",
         "next": "chapter1_observe_crystal",
         "params": {
-          "memory": 1
+          "memory": 1,
+          "curiosity": 1
         }
       },
       {
@@ -203,7 +207,166 @@
   
   "chapter2_start": {
     "id": "chapter2_start",
-    "text": "【第2章】\n\n※第2章のシナリオは現在作成中です。\n\n「最初から」と入力すると、プロローグの最初に戻ります。",
+    "text": "【第2章】\n\nゲームセンターに向かおうと思ったが、そういや今日は学校だった。\n\n学校に行く準備をしながら昨夜のことを考える。\n\n通知のきっかけは謎のユーザーだった。\n\n「time-user/NEKONOKIMOCHI……」\n\nタイムユーザーって…？あと、猫の気持ち……？",
+    "choices": [
+      {
+        "label": "タイムユーザーについて調べる",
+        "value": "research_time_user",
+        "next": "chapter2_research_path",
+        "params": {
+          "curiosity": 2,
+          "memory": 1
+        }
+      },
+      {
+        "label": "学校に行く",
+        "value": "go_to_school",
+        "next": "chapter2_school_path"
+      }
+    ]
+  },
+  
+  "chapter2_research_path": {
+    "id": "chapter2_research_path",
+    "text": "「アレ◯サ、タイムユーザーってって何？」\n\n「タイムユーザーとは、時間を超えてアクセスして来たユーザー、つまりタイムカプセルを作成したユーザーのことを指します。ひなさんも小学生の時にやりませんでしたか？思い出を見返して、と言ってください。」\n\nああ、そういうことか。記憶はないがやったのかもしれない。\n\n「ありがと。」アレクサの余計な喋りに少しの苛立ちを覚えながら、一応感謝を伝える。\n\n「どういたしまして！」\n\nしかし、タイムカプセル。誰が私に……しかも、なぜ昨日だったんだろう？\n\n思考の波に飲まれそうだったが、ふと思い出して時計を見る。\n\n「やっばー」始業まで後10分。技術の進歩により超高速移動が可能になったとはいえ、流石にギリギリだ。猛ダッシュで家を駆け出した。",
+    "next": "chapter2_school_scene"
+  },
+  
+  "chapter2_school_path": {
+    "id": "chapter2_school_path",
+    "text": "ま、考えても仕方ないか。わかるとも思えないし。\n\nそう思い直して、優雅にご飯を食べ、ゆっくりと家を出る。\n\n優雅といっても、スクランブルエッグだけどね。",
+    "params": {
+      "resolve": 1
+    },
+    "next": "chapter2_school_scene"
+  },
+  
+  "chapter2_school_scene": {
+    "id": "chapter2_school_scene",
+    "text": "学校について、友達とおしゃべりをし、授業を受け、お昼は購買で買った焼きそばパンを食べる。昨夜の通知で乱されたとはいえ、お昼はいつもの日常だ。\n\nちなみに昨夜あまり寝ていないせいで午後の授業が厳しそうだったからという言い訳のもとオロナミンCを買ったのは黙っておくことにする。だって好きなんだもん。女子高生がオロナミンC好きなんて、、、いや普通なんだろうか…？\n\n今日は珍しく3限で授業が終わった。\n\nちなみに今日は部活が休みなためフリーだ。ということでゲームセンターへ行く時間はたっぷりある。\n\n謎のユーザーはこれも見越して……なんてことはあるはずもなかろう。私でさえ今日知った突然の休講だったのだから、もしそうだとしたら未来視を持っているとしか思えない。",
+    "next": "chapter2_route_choice"
+  },
+  
+  "chapter2_route_choice": {
+    "id": "chapter2_route_choice",
+    "text": "友達と別れて、ゲームセンターへの道を歩く。\n\nちなみにだが友達とはそこそこ上手くやってる方だと思う。\n\n10分ほど歩いたところで、見慣れたスター◯ックスの看板が目に入る。",
+    "choices": [
+      {
+        "label": "ゲームセンターへ直行する",
+        "value": "go_direct",
+        "next": "chapter2_direct_path",
+        "params": {
+          "resolve": 2
+        }
+      },
+      {
+        "label": "スター◯ックスに寄る",
+        "value": "go_starbucks",
+        "next": "chapter2_starbucks_path",
+        "params": {
+          "curiosity": 2,
+          "bond": 1
+        }
+      }
+    ]
+  },
+  
+  "chapter2_direct_path": {
+    "id": "chapter2_direct_path",
+    "text": "せっかく時間があるとはいえ、早く星屑を見つけたい。\n\nスタバは今度にして、ゲームセンターへ直行することにした。\n\nさらに10分ほど歩いたところで息切れしてきた。\n\n体力ないにも関わらず歩いて来たのがバカだったと悔やむがもう遅い。この辺にはスカイボード（高校生に人気な空飛ぶ乗り物）のレンタル場なんてないのだ。ロマン溢れるレンタサイクルというものが遠くに見えるが、あれはどちらにしろ疲れるし、なぜかスカイボードより高いので乗る気はない。\n\n「こっちは貧乏学生だっつーの。」そう呟いて、足元の小石を蹴る。\n\nこれがイケメンにぶつかって、とかないかー……",
+    "next": "chapter2_game_center_arrival"
+  },
+  
+  "chapter2_starbucks_path": {
+    "id": "chapter2_starbucks_path",
+    "text": "友達を誘って行こうかとも考えたが、その後星屑探しに行くんだし、一緒に行ったら遊びになる流れになっちゃうだろうな〜と思ってやめる。\n\nたまには1人で行くのもいいだろう。\n\n「せっかくだからあれ頼もっ。」\n\nいつもは少しJKらしくないとこがあるかなと思ってあまり頼まないが、密かに大好きなやつがあるのだ。\n\nん？あんた貧乏学生じゃなかったのかって？\n\n「だまんらっしゃい！」おっと、心の声が漏れたようだ……というか誰に話してるの私？\n\n学園都市にあるだけあっていつも学生で混雑しているのだが、今日は3限終わりだったため空いていた。ラッキーと思いながら早速注文する。\n\n「ほうじ茶＆クラシックティーラテのトールで。ミルクはアーモンドにして、シロップはライトでお願いします。」\n\n言えた。これは全然マシな方とはいえ、スタバのメニューは呪文なのだ。毎回地味に緊張する。\n\nゆっくり飲もうかとも考えたが、持ち帰りにしてもらってゲームセンターへ歩く。ここから10分ほどの距離だ。\n\nあ、みんなもこのメニュー頼んでみてねー。ってやっぱ誰に言ってるんだ私!?",
+    "next": "chapter2_game_center_arrival"
+  },
+  
+  "chapter2_game_center_arrival": {
+    "id": "chapter2_game_center_arrival",
+    "text": "そんなつまらないことを考えているうちにゲームセンターへ到着した。\n\n中に入るとクレーンゲームや、音ゲー格ゲーといったアーケードゲームがずらりと並んでいる。あとはプリクラとか。\n\n前回の例で行くと通知があるかと思ったが、まだ何も来ない。\n\nせっかくなので遊ぼうと思う。\n\nここは無難にクレーンゲームといく。",
+    "next": "chapter2_crane_game"
+  },
+  
+  "chapter2_crane_game": {
+    "id": "chapter2_crane_game",
+    "text": "─── 10 minutes later\n\nま、負けた……\n\n1000円も使ってしまったのに収穫ゼロ…\n\nやった感じ結構楽しくて好きなんだけどなー\n\nその後音ゲー格ゲーにも軽く挑戦したのだが、自分は向いていなかったらしい。",
+    "params": {
+      "curiosity": 1
+    },
+    "choices": [
+      {
+        "label": "もう少し粘ってみる",
+        "value": "keep_trying",
+        "next": "chapter2_keep_trying",
+        "params": {
+          "resolve": 1,
+          "curiosity": 1
+        }
+      },
+      {
+        "label": "諦めて帰ろうとする",
+        "value": "give_up",
+        "next": "chapter2_give_up"
+      }
+    ]
+  },
+  
+  "chapter2_keep_trying": {
+    "id": "chapter2_keep_trying",
+    "text": "もしかして───『「なんでもできるけど、なんでも下手」って私のこと…？』\n\nいいや、ふと思ったがそんなことはないだろう。だって私、ゲームやったの今日が初めてだから難しかっただけだし。\n\nもう少しだけやってみよう。\n\nでも、結局30分経っても通知が来なかった。",
+    "next": "chapter2_find_crystal"
+  },
+  
+  "chapter2_give_up": {
+    "id": "chapter2_give_up",
+    "text": "もしかして───『「なんでもできるけど、なんでも下手」って私のこと…？』\n\nいいや、ふと思ったがそんなことはないだろう。だって私、ゲームやったの今日が初めてだから難しかっただけだし。\n\n結局1時間経っても通知が来なかったのでもう帰ることにする。",
+    "next": "chapter2_find_crystal"
+  },
+  
+  "chapter2_find_crystal": {
+    "id": "chapter2_find_crystal",
+    "text": "「なんなんだよ…」\n\n悪態をつきながら出口に向かっていると、目の端にきらりと光るものを捉えた。\n\n「あ……」星屑だ！\n\nそれはクレーンゲームの中に配置されていた。\n\n「取れってこと？」",
+    "choices": [
+      {
+        "label": "挑戦してみる",
+        "value": "try_crane",
+        "next": "chapter2_memory_flash",
+        "params": {
+          "resolve": 2
+        }
+      },
+      {
+        "label": "じっと見つめる",
+        "value": "stare",
+        "next": "chapter2_memory_flash",
+        "params": {
+          "memory": 1
+        }
+      }
+    ]
+  },
+  
+  "chapter2_memory_flash": {
+    "id": "chapter2_memory_flash",
+    "text": "そう呟くと、視界が揺らいだ。\n\n[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— 大丈夫大丈夫！下手でも楽しければいいんだよ！』\n\n『—— ほら、一緒にやろう？私が教えてあげる！』\n\n『—— できた！？すごいじゃん！』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_02: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\n温かい声。励ましてくれる誰か。\n\nあれは誰？",
+    "params": {
+      "bond": 2,
+      "memory": 1
+    },
+    "next": "chapter2_notification"
+  },
+  
+  "chapter2_notification": {
+    "id": "chapter2_notification",
+    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"BEGINNER_GAMER\"\n信号品質: 29.6 dB\n要求: TIME-ANCHOR / FRAGMENT_03\nトークン: 0xA7F2::7d8e-2f4b\nFragment_03 解放準備中...\n\n断片受信 3 / 07\n\nメッセージ復元:\n「ちょっとだけ猫アレルギーあるんだよね」\n\nヒント: FELINE_PARADOX = TRUE\n推定座標: 猫カフェ「ねこのきもち」\nセッションID: sess-0xA7F2-03\n\n探索を継続してください。\n\n【第2章・終わり】",
+    "next": "chapter3_start"
+  },
+  
+  "chapter3_start": {
+    "id": "chapter3_start",
+    "text": "【第3章】\n\n※第3章のシナリオは現在作成中です。\n\n「最初から」と入力すると、プロローグの最初に戻ります。",
     "next": null
   }
 }
