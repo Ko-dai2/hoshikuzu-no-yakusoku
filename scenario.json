@@ -31,7 +31,7 @@
   
   "prologue_auth_yes": {
     "id": "prologue_auth_yes",
-    "text": "入力: y\n\n認証開始…認証中…\n公開鍵照合…OK\n暗号チャネル確立…完了\n\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n認証完了。探索を開始してください。\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。\n\n【プロローグ・終わり】",
+    "text": "入力: y\n\n認証開始…認証中…\n公開鍵照合…OK\n暗号チャネル確立…完了\n\n断片受信 1 / 05\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n認証完了。探索を開始してください。\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。\n\n【プロローグ・終わり】",
     "next": "chapter1_start"
   },
   
@@ -54,7 +54,7 @@
   
   "prologue_force": {
     "id": "prologue_force",
-    "text": "……応答なし。\n\n再試行……再試行……失敗。\n\nアクセス権限がtime-user:NEKONOKIMOCHIにより上書きされました。\n\n[ERROR]\nプロトコル TIME-LINK が強制起動されました。\n\n通信チャネルを確立しています……OK\n断片受信 1 / 07\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。\n\n【プロローグ・終わり】",
+    "text": "……応答なし。\n\n再試行……再試行……失敗。\n\nアクセス権限がtime-user:NEKONOKIMOCHIにより上書きされました。\n\n[ERROR]\nプロトコル TIME-LINK が強制起動されました。\n\n通信チャネルを確立しています……OK\n断片受信 1 / 05\n\nメッセージ復元:\n「For you — 星屑が近くにあります」\n\n推定座標: なないろ公園（精度: ±5m）\nセッションID: sess-0xA7F2-01\n\n画面の光が一瞬揺らいだ。\nあなたの端末に、見知らぬ場所の座標が表示されている。\n\n【プロローグ・終わり】",
     "next": "chapter1_start"
   },
   
@@ -142,7 +142,7 @@
   
   "chapter1_found_crystal": {
     "id": "chapter1_found_crystal",
-    "text": "───\n\n気づいたら朝で、知らない天井……ではなくいつもの自室のベットの上だった。\n\n何か昨日あったような………それとも夢……？\n\n一瞬そう思ったが、ホログラムを見て認識を改める。\n\n[SYSTEM] セッション記録\n日時: XXXX年XX月XX日 03:47\n取得済みフラグメント: 01 / 07\nステータス: ACTIVE\nTIME-ANCHOR_01: 確保済み\n保存場所: local_storage/fragments/01.dat\n整合性: OK\n\nそう、実は手に、キラキラと七色に煌めく小さな水晶を握っていた。\n\nこれが星屑とシステムが呼称しているものだろう。これを七個集めたら何か…",
+    "text": "───\n\n気づいたら朝で、知らない天井……ではなくいつもの自室のベットの上だった。\n\n何か昨日あったような………それとも夢……？\n\n一瞬そう思ったが、ホログラムを見て認識を改める。\n\n[SYSTEM] セッション記録\n日時: XXXX年XX月XX日 03:47\n取得済みフラグメント: 01 / 05\nステータス: ACTIVE\nTIME-ANCHOR_01: 確保済み\n保存場所: local_storage/fragments/01.dat\n整合性: OK\n\nそう、実は手に、キラキラと七色に煌めく小さな水晶を握っていた。\n\nこれが星屑とシステムが呼称しているものだろう。これを五個集めたら何か…",
     "choices": [
       {
         "label": "水晶をじっくり観察する",
@@ -172,7 +172,7 @@
   
   "chapter1_new_notification": {
     "id": "chapter1_new_notification",
-    "text": "その数秒後、新しい通知が鳴った。\n\n[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"ENERGY_DRINK_LOVER\"\n信号品質: 31.8 dB\n要求: TIME-ANCHOR / FRAGMENT_02\nトークン: 0xA7F2::9e3f-4a1c\nFragment_02 解放準備中...\n\n断片受信 2 / 07\n\nメッセージ復元:\n「なんでもできるけど、なんでも下手なんだよね」\n\nヒント: HIGH_SCORE = 000000\n推定座標: ゲームセンター「NOVA」跡地\nセッションID: sess-0xA7F2-02\n\n探索を継続してください。",
+    "text": "その数秒後、新しい通知が鳴った。\n\n[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"ENERGY_DRINK_LOVER\"\n信号品質: 31.8 dB\n要求: TIME-ANCHOR / FRAGMENT_02\nトークン: 0xA7F2::9e3f-4a1c\nFragment_02 解放準備中...\n\n断片受信 2 / 05\n\nメッセージ復元:\n「なんでもできるけど、なんでも下手なんだよね」\n\nヒント: HIGH_SCORE = 000000\n推定座標: ゲームセンター「NOVA」跡地\nセッションID: sess-0xA7F2-02\n\n探索を継続してください。",
     "choices": [
       {
         "label": "すぐに向かう",
@@ -291,7 +291,7 @@
   
   "chapter2_memory_flash": {
     "id": "chapter2_memory_flash",
-    "text": "[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— 大丈夫大丈夫！下手でも楽しければいいんだよ！』\n\n『—— ほら、一緒にやろう？私が教えてあげる！』\n\n『—— できた！？すごいじゃん！』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_02: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\n温かい声。励ましてくれる誰か。\n\nあれは誰？",
+    "text": "[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— 大丈夫大丈夫！下手でも楽しければいいんだよ！』\n\n『—— ほら、一緒にやろう？私が教えてあげる！』\n\n『—— できた！？すごいじゃん！』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_02: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\n気がつくと、私は星屑を握っていた。\n\n温かい声。励ましてくれる誰か。\n\nあれは誰？",
     "params": {
       "bond": 2,
       "memory": 1
@@ -301,7 +301,7 @@
   
   "chapter2_notification": {
     "id": "chapter2_notification",
-    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"BEGINNER_GAMER\"\n信号品質: 29.6 dB\n要求: TIME-ANCHOR / FRAGMENT_03\nトークン: 0xA7F2::7d8e-2f4b\nFragment_03 解放準備中...\n\n断片受信 3 / 07\n\nメッセージ復元:\n「ちょっとだけ猫アレルギーあるんだよね」\n\nヒント: FELINE_PARADOX = TRUE\n推定座標: 猫カフェ「キャットパレード」\nセッションID: sess-0xA7F2-03\n\n探索を継続してください。\n\n【第2章・終わり】",
+    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"BEGINNER_GAMER\"\n信号品質: 29.6 dB\n要求: TIME-ANCHOR / FRAGMENT_03\nトークン: 0xA7F2::7d8e-2f4b\nFragment_03 解放準備中...\n\n断片受信 3 / 05\n\nメッセージ復元:\n「ちょっとだけ猫アレルギーあるんだよね」\n\nヒント: FELINE_PARADOX = TRUE\n推定座標: 猫カフェ「キャットパレード」\nセッションID: sess-0xA7F2-03\n\n探索を継続してください。\n\n【第2章・終わり】",
     "next": "chapter3_start"
   },
   
@@ -325,7 +325,7 @@
   
   "chapter3_memory_flash": {
     "id": "chapter3_memory_flash",
-    "text": "[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— 猫、好きなんだ？私も！』\n\n『—— え、アレルギーあるの？それでも来てくれたんだ…』\n\n『—— いつか、みんなで猫カフェコラボとかできたらいいよね』\n\n『—— 猫カフェと○○○○○のコラボとか最高じゃない？』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_03: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\nやっぱりこれ、私の記憶だ。なんとなくわかる、というかそうだ。\n\nだけど、わからない。記憶にない…\n\n７つ集まればきっと、わかるはずだ。\n\n今はただ、大事なものであるという予感だけが感じられる。\n\nああ、",
+    "text": "[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— 猫、好きなんだ？私も！』\n\n『—— え、アレルギーあるの？それでも来てくれたんだ…』\n\n『—— いつか、みんなで猫カフェコラボとかできたらいいよね』\n\n『—— 猫カフェと○○○○○のコラボとか最高じゃない？』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_03: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\nやっぱりこれ、私の記憶だ。なんとなくわかる、というかそうだ。\n\nだけど、わからない。記憶にない…\n\n５つ集まればきっと、わかるはずだ。\n\n今はただ、大事なものであるという予感だけが感じられる。\n\nああ、",
     "params": {
       "bond": 2,
       "memory": 2
@@ -372,19 +372,154 @@
   
   "chapter3_notification": {
     "id": "chapter3_notification",
-    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"CAT_LOVER\"\n信号品質: 28.3 dB\n要求: TIME-ANCHOR / FRAGMENT_04\nトークン: 0xA7F2::5c2d-8e9a\nFragment_04 解放準備中...\n\n断片受信 4 / 07\n\nメッセージ復元:\n「綺麗な音が大好き」\n\nヒント: PIANO_MELODY = TRUE\n推定座標: 旧市街 音楽スタジオ「Harmony」\nセッションID: sess-0xA7F2-04\n\n探索を継続してください。",
+    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"CAT_LOVER\"\n信号品質: 28.3 dB\n要求: TIME-ANCHOR / FRAGMENT_04\nトークン: 0xA7F2::5c2d-8e9a\nFragment_04 解放準備中...\n\n断片受信 4 / 05\n\nメッセージ復元:\n「綺麗な音が大好き」\n\nヒント: PIANO_MELODY = TRUE\n推定座標: 旧セレネ音楽ホール\nセッションID: sess-0xA7F2-04\n\n探索を継続してください。",
     "next": "chapter3_end"
   },
   
   "chapter3_end": {
     "id": "chapter3_end",
-    "text": "夕暮れの帰り道、鼻をすすりながら歩く。\n\nでも、心は温かい。\n\n誰かと話した夢の記憶。\n\n叶えたかった夢があったことがわかった。でも──\n\n「なぜその記憶が私にはないの？」\n\n家に帰って、部屋で3つの星屑を並べる。\n\nそれぞれ、少しずつ色が違う気がする。\n\n「次は…音楽スタジオ」\n\n綺麗な音ってなんだろう？\n\nなぜか、胸が高鳴る。\n\n【第3章・終わり】",
+    "text": "夕暮れの帰り道、鼻をすすりながら歩く。\n\nでも、心は温かい。\n\n誰かと話した夢の記憶。\n\n叶えたかった夢があったことがわかった。でも──\n\n「なぜその記憶が私にはないの？」\n\n家に帰って、部屋で3つの星屑を並べる。\n\nそれぞれ、少しずつ色が違う気がする。\n\n「次は…音楽ホール」\n\n綺麗な音ってなんだろう？\n\nなぜか、胸が高鳴る。\n\n【第3章・終わり】",
     "next": "chapter4_start"
   },
   
   "chapter4_start": {
     "id": "chapter4_start",
-    "text": "【第4章】\n\n※第4章のシナリオは現在作成中です。\n\n「最初から」と入力すると、プロローグの最初に戻ります。",
+    "text": "【第4章】\n\n今日は学校が休みだ。そのため朝から「旧セレネ音楽ホール」へ向かう…と言いたかったけどダラダラしてたらもう17時になってしまった。\n\nま、まあ許して？美少女無罪ってやつですから！\n\n急ぎ準備をして、「行ってきまーす！」と叫んで家を出る。\n\n一人暮らしだから、誰もいないんだけどね。\n\n1ヶ月前まではまだこの時間は明るかったように思うが、もう十一月だ。薄暗い。\n\nマップを見ると少し距離があるようだ。",
+    "choices": [
+      {
+        "label": "スカイタクシーを呼ぶ",
+        "value": "call_taxi",
+        "next": "chapter4_taxi_path"
+      },
+      {
+        "label": "スカイボードを借りる",
+        "value": "rent_skyboard",
+        "next": "chapter4_skyboard_path",
+        "params": {
+          "curiosity": 1
+        }
+      }
+    ]
+  },
+  
+  "chapter4_taxi_path": {
+    "id": "chapter4_taxi_path",
+    "text": "スカイタクシーを呼ぼうと思ったけどやめにする。おととい3000円ほど使ってしまったし、毎日1000円ほど使っているせいで今月はもう金欠気味だ〜\n\nそれもこれもこの星屑集めの気がする。",
+    "next": "chapter4_skyboard"
+  },
+  
+  "chapter4_skyboard_path": {
+    "id": "chapter4_skyboard_path",
+    "text": "貧乏学生だからタクシーは諦めよう。スカイボードで行くことにする。",
+    "next": "chapter4_skyboard"
+  },
+  
+  "chapter4_skyboard": {
+    "id": "chapter4_skyboard",
+    "text": "家の近くにあるスカイボード（高校生に人気な空飛ぶ乗り物）のレンタル場に寄って借りたスカイボードに乗って空を駆ける。今日の気温は8℃だけど、防風幕が生成されるため高速移動してもポカポカだ。\n\nちなみにスカイボードは空飛ぶスケボーと思ってもらって良い。謎技術でバランスを取る必要がないので運動音痴な私でも難なく乗れる。\n\n余裕で時速50kmは出るスカイボードを使ったにも関わらず、30分もかかって「旧セレネ音楽ホール」に到着した。\n\nなんというか、廃墟じゃないかここ？心配になってくる。\n\nピコン。",
+    "next": "chapter4_system_message"
+  },
+  
+  "chapter4_system_message": {
+    "id": "chapter4_system_message",
+    "text": "[SYSTEM] 推定座標範囲内への到着を検出。\nGPS精度: ±2.3m\nスキャンを開始します...\n詳細座標特定プロセス起動中...\n三角測量実行...OK\n環境マッピング...OK\n目標物検索...OK\n\n対象者「ひな」の心理的不安を確認。NEKONOKIMOCHIからの伝言を表示……\n\n「少し昔はこのあたりが中心だったんだよ。学園街セレネ。聞いたことある？私たちにとって大事な場所でしょ？」\n\n学園街セレネ…なんか聞いたことあるようなないような。って、私たち？NEKONOKIMOCHIって1人じゃないのかも。星屑を見つけた時に再生される記憶断片でも毎回違う人の声が聞こえたけど、あの声ってNEKONOKIMOCHIのメンバーなのかな？\n\nこれまでこんなメッセージが来たことはなかった。それほど大事なところなのだろう。\n\nこれまで３つの星屑を集めて、何かの要素に触れた時に星屑が現れ記憶断片という名の謎の声が再生されているように思う。\n\nおそらく私の、なぜか忘れていた記憶だろうと思うが、、、",
+    "choices": [
+      {
+        "label": "怖くなってきた",
+        "value": "feel_scared",
+        "next": "chapter4_scared_path",
+        "params": {
+          "memory": 1
+        }
+      },
+      {
+        "label": "早く音楽ホールに入ろう",
+        "value": "enter_hall",
+        "next": "chapter4_enter_hall"
+      }
+    ]
+  },
+  
+  "chapter4_scared_path": {
+    "id": "chapter4_scared_path",
+    "text": "忘れていた記憶…なんだか急に怖くなってきた。\n\n本当に星屑を集めていいのか？私はそもそもなぜ記憶を失っているの？確かに、よくよく考えれば幼少期の記憶がない。ただ幼くて覚えていないだけだと思っていたが記憶喪失というやつなのかもしれない。",
+    "next": "chapter4_enter_hall"
+  },
+  
+  "chapter4_enter_hall": {
+    "id": "chapter4_enter_hall",
+    "text": "また思考の波に飲まれそうになっていたけど早く星屑を見つけて帰らないと。\n\n時刻は18時。もう空は真っ暗に近い。しかも昔は中心だったそうだが今やここら辺に灯りはない。\n\nデバイスに付いているライトの灯りを頼りに音楽ホールに入る。\n\n扉を開けるとピアノの音色が聞こえてきた。\n\n「誰かいるの……？」\n\n流石にビビった。こんな夜にこんなところに1人で来ようと思えるくらいには胆力があると自認しているが、これは聞いてない。\n\nいや、せっかくきたんだし、未来視の疑いもあるNEKONOKIMOCHIからのメッセージもあったことだ。おそらく大丈夫と信じて歩を進める。\n\n「あ、」\n\n誰かいたわけではなかった。自動演奏…？\n\n「って、天井穴空いてるじゃん！」\n\n「うわぁ、綺麗！」",
+    "next": "chapter4_starry_sky"
+  },
+  
+  "chapter4_starry_sky": {
+    "id": "chapter4_starry_sky",
+    "text": "やばいところだと身構えたが天井の穴から見える星空と、それに並走するように演奏されるクラシック──絶景だ。\n\nルミナ中心では夜でも昼のような明るさのため、当然星は見えない。街の外へ出ることは滅多になかったためこんなにしっかり本物の星空を見たのは初めてだ。\n\nしかもこの音楽がそれを引き立てている。\n\nそしてホールの中心、そこに今までものとは違う、手のひらから溢れそうなほどの大きさの星屑が鎮座していた。まるで宝玉だ。\n\n触れてみると、これまたこれまでと比べ物にならないくらい大きく視界が乱れた。",
+    "next": "chapter4_memory_flash"
+  },
+  
+  "chapter4_memory_flash": {
+    "id": "chapter4_memory_flash",
+    "text": "[MEMORY FRAGMENT DETECTED]\n再生を開始します...\n\n『—— ねえ、一緒に歌おう？』\n\n『—— 5人で歌ったら、きっと幸せを合成できる気がする』\n\n『—— 私踊るー』\n\n『—— バーチャルでもリアルでも、私たちは私たちだよ』\n\n『—— このチーム名、どう？「NEKONOKIMOCHI」！』\n\n『—— いいね！5人の気持ちも込めて』\n\n[SYSTEM] 記憶断片の再生が完了しました。\nFragment_04: 取得済み\n暗号化データを復号中...\n......\n......\n接続が切断されました。\n\n4人とは親友だった。4人がどんな人で、どんな名前で──そういうことは思い出せないけど、わかる。\n\n私はみんなで歌っていた。バーチャル空間で。",
+    "params": {
+      "bond": 3,
+      "memory": 3
+    },
+    "choices": [
+      {
+        "label": "「NEKONOKIMOCHI…私たちのチーム名」",
+        "value": "team_name",
+        "next": "chapter4_team_name_path",
+        "params": {
+          "memory": 2,
+          "bond": 1
+        }
+      },
+      {
+        "label": "「また、5人で歌いたい」",
+        "value": "want_sing",
+        "next": "chapter4_want_sing_path",
+        "params": {
+          "bond": 2,
+          "resolve": 2
+        }
+      }
+    ]
+  },
+  
+  "chapter4_team_name_path": {
+    "id": "chapter4_team_name_path",
+    "text": "涙が溢れそうになる。私に呼びかけてるのは、過去の仲間たち？\n\n4人とは親友だった。4人がどんな人で、どんな名前で──そういうことは思い出せないけど、わかる。\n\n星屑を見つけるたびに聞こえるあの、温かな声。あれはきっと、みんなの声だ。\n\n私はみんなで、5人で歌っていた。バーチャル空間で。",
+    "next": "chapter4_virtual_memory"
+  },
+  
+  "chapter4_want_sing_path": {
+    "id": "chapter4_want_sing_path",
+    "text": "どんな子達なんだろう？私はなぜ忘れてしまったんだろう？\n\n涙が溢れそうになる。思い出せて嬉しい。\n\n会いたい、話したい。そしてまた、5人で歌いたい！\n\n私はみんなで、5人で歌っていたんだ。バーチャル空間で。",
+    "next": "chapter4_virtual_memory"
+  },
+  
+  "chapter4_virtual_memory": {
+    "id": "chapter4_virtual_memory",
+    "text": "バーチャルで……？\n\n私が最後に歌った場所。セレナ……？\n\nここ？そうだ、ここだった。\n\nでも私が歌ってたのはバーチャルのはず…？\n\nピコン",
+    "next": "chapter4_notification"
+  },
+  
+  "chapter4_notification": {
+    "id": "chapter4_notification",
+    "text": "[SYSTEM] 次のフラグメント解放条件を満たしました。\nACHIEVEMENT UNLOCKED: \"MELODY_SEEKER\"\n信号品質: 35.7 dB\n要求: TIME-ANCHOR / FRAGMENT_05\nトークン: 0xA7F2::2f9d-7c6e\nFragment_05 解放準備中...\n\n断片受信 5 / 05\n\nメッセージ復元:\n「海の怪獣みたいで好き」\n\nヒント: AQUATIC_MEMORY = TRUE\n推定座標: セレネ・アクアリウム\nセッションID: sess-0xA7F2-05\n\n最後のフラグメント。全ての記憶が繋がります。\n探索を継続してください。",
+    "next": "chapter4_end"
+  },
+  
+  "chapter4_end": {
+    "id": "chapter4_end",
+    "text": "涙を拭いながら、ホールを後にする。\n\n冷たい夜風が私を落ち着けてくれる。\n\n「次は水族館…あと、ひとつ。」\n\n【第4章・終わり】",
+    "next": "chapter5_start"
+  },
+  
+  "chapter5_start": {
+    "id": "chapter5_start",
+    "text": "【第5章】\n\n※第5章のシナリオは現在作成中です。\n\n「最初から」と入力すると、プロローグの最初に戻ります。",
     "next": null
   }
 }
