@@ -341,7 +341,7 @@
         }
       },
       {
-        "label": "「みんなと一緒なら、叶えられる気がした。」",
+        "label": "「みんなと一緒なら、叶えられる気がした」",
         "value": "dream_together",
         "next": "chapter3_together_path",
         "params": {
@@ -467,7 +467,7 @@
     },
     "choices": [
       {
-        "label": "「NEKONOKIMOCHI…私たちのチーム名」",
+        "label": "「NEKONOKIMOCHI…」",
         "value": "team_name",
         "next": "chapter4_team_name_path",
         "params": {
@@ -489,7 +489,7 @@
   
   "chapter4_team_name_path": {
     "id": "chapter4_team_name_path",
-    "text": "涙が溢れそうになる。私に呼びかけてるのは、過去の仲間たち？\n\n4人とは親友だった。4人がどんな人で、どんな名前で──そういうことは思い出せないけど、わかる。\n\n星屑を見つけるたびに聞こえるあの、温かな声。あれはきっと、みんなの声だ。\n\n私はみんなで、5人で歌っていた。バーチャル空間で。",
+    "text": "「NEKONOKIMOCHI…私たちのチーム名…」\n\n涙が溢れそうになる。私に呼びかけてるのは、過去の仲間たち？\n\n4人とは親友だった。4人がどんな人で、どんな名前で──そういうことは思い出せないけど、わかる。\n\n星屑を見つけるたびに聞こえるあの、温かな声。あれはきっと、みんなの声だ。\n\n私はみんなで、5人で歌っていた。バーチャル空間で。",
     "next": "chapter4_virtual_memory"
   },
   
