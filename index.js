@@ -25,7 +25,7 @@ try {
   const scenarioData = fs.readFileSync('scenario.json', 'utf8');
   scenario = JSON.parse(scenarioData);
   console.log('Scenario loaded successfully.');
-  console.log('Available scenes:', Object.keys(scenario).join(', '));
+  console.log('Available scenes:', Object.keys(scenario).length);
   console.log('========================================');
 } catch (error) {
   console.error('FATAL ERROR: Failed to load scenario.json');
@@ -44,7 +44,7 @@ function initializeUser(userId) {
     memory: 0,
     bond: 0,
     resolve: 0,
-    curiosity: 0,  // ← この行を追加
+    curiosity: 0,
     history: []
   };
   console.log(`User initialized: ${userId}`);
@@ -82,10 +82,78 @@ function updateParameters(user, params) {
     user.resolve += params.resolve;
     console.log(`Resolve updated: ${user.resolve}`);
   }
-  if (params.curiosity) {  // ← この4行を追加
+  if (params.curiosity) {
     user.curiosity += params.curiosity;
     console.log(`Curiosity updated: ${user.curiosity}`);
   }
+}
+
+// エンディング判定
+function determineEnding(user) {
+  const { memory, bond, resolve, curiosity } = user;
+  
+  console.log('========================================');
+  console.log('Determining ending...');
+  console.log(`Parameters: memory=${memory}, bond=${bond}, resolve=${resolve}, curiosity=${curiosity}`);
+  
+  // Bad End判定（最優先）
+  if (memory >= 6 && (bond <= 2 || resolve <= 2)) {
+    console.log('Ending determined: Bad End');
+    console.log('========================================');
+    return 'ending_bad_start';
+  }
+  
+  // True End判定
+  if (memory >= 4 && bond >= 4 && resolve >= 4 && curiosity >= 4) {
+    console.log('Ending determined: Radiant End (True End)');
+    console.log('========================================');
+    return 'ending_radiant_start';
+  }
+  
+  // Bond End判定
+  if (bond >= 5 && bond > memory && bond > resolve && bond > curiosity) {
+    console.log('Ending determined: Bond End');
+    console.log('========================================');
+    return 'ending_bond_start';
+  }
+  
+  // Resolve End判定
+  if (resolve >= 5 && resolve > memory && resolve > bond && resolve > curiosity) {
+    console.log('Ending determined: Resolve End');
+    console.log('========================================');
+    return 'ending_resolve_start';
+  }
+  
+  // Curiosity End判定
+  if (curiosity >= 4 && curiosity > memory && curiosity > bond && curiosity > resolve) {
+    console.log('Ending determined: Curiosity End');
+    console.log('========================================');
+    return 'ending_curiosity_start';
+  }
+  
+  // デフォルト（最も高いパラメータで判定）
+  const maxParam = Math.max(memory, bond, resolve, curiosity);
+  
+  if (bond === maxParam) {
+    console.log('Ending determined: Bond End (default - bond highest)');
+    console.log('========================================');
+    return 'ending_bond_start';
+  }
+  if (resolve === maxParam) {
+    console.log('Ending determined: Resolve End (default - resolve highest)');
+    console.log('========================================');
+    return 'ending_resolve_start';
+  }
+  if (curiosity === maxParam) {
+    console.log('Ending determined: Curiosity End (default - curiosity highest)');
+    console.log('========================================');
+    return 'ending_curiosity_start';
+  }
+  
+  // 最終的なデフォルト（Bond End）
+  console.log('Ending determined: Bond End (final default)');
+  console.log('========================================');
+  return 'ending_bond_start';
 }
 
 // LINEメッセージの作成
@@ -103,12 +171,12 @@ function createLineMessage(scene) {
         action: {
           type: 'message',
           label: choice.label,
-          text: choice.label  // ← valueではなくlabelを送信
+          text: choice.label
         }
       }))
     };
   } else if (scene.next) {
-    // 選択肢がなく次のシーンがある場合は「次へ」ボタン
+    // 選択肢がない次のシーンがある場合は「次へ」ボタン
     message.quickReply = {
       items: [{
         type: 'action',
@@ -140,6 +208,18 @@ function processUserInput(user, inputText) {
     if (currentScene.next) {
       // シーン自体のパラメータを更新
       updateParameters(user, currentScene.params);
+      
+      // chapter5_decisionの場合はエンディング判定を行う
+      if (currentScene.id === 'chapter5_decision') {
+        const endingSceneId = determineEnding(user);
+        user.currentSceneId = endingSceneId;
+        user.history.push({
+          from: currentScene.id,
+          to: endingSceneId,
+          choice: '__ending_determined__'
+        });
+        return getSceneData(user.currentSceneId);
+      }
       
       user.currentSceneId = currentScene.next;
       user.history.push({
@@ -264,7 +344,7 @@ async function handleEvent(event) {
       console.log('User not found, sending welcome message');
       return client.replyMessage(replyToken, {
         type: 'text',
-        text: '物語を開始中……'
+        text: '物語を開始するには「物語を開始中……」と入力してください。'
       });
     }
     
